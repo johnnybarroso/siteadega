@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adega das Negas - Cervejas e Drinks Especiais</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(255,165,0,0.9) 0%, rgba(255,69,0,0.9) 100%);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="bg-orange-50">
+    <!-- Header/Navigation -->
+    <header class="bg-orange-600 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-beer text-2xl"></i>
+                <h1 class="text-2xl font-bold">Adega das Negas</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-orange-200 transition">Início</a>
+                <a href="#products" class="hover:text-orange-200 transition">Produtos</a>
+                <a href="#about" class="hover:text-orange-200 transition">Sobre</a>
+                <a href="#location" class="hover:text-orange-200 transition">Localização</a>
+                <a href="#contact" class="hover:text-orange-200 transition">Contato</a>
+            </nav>
+            <button class="md:hidden text-2xl" id="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-orange-700 w-full py-4 px-4" id="mobile-menu">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="hover:text-orange-200 transition">Início</a>
+                <a href="#products" class="hover:text-orange-200 transition">Produtos</a>
+                <a href="#about" class="hover:text-orange-200 transition">Sobre</a>
+                <a href="#location" class="hover:text-orange-200 transition">Localização</a>
+                <a href="#contact" class="hover:text-orange-200 transition">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Adega das Negas</h1>
+                <p class="text-xl mb-6">As melhores cervejas e drinks com gelo saborizado em Prado - BA</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#products" class="bg-white text-orange-600 font-bold py-3 px-6 rounded-full hover:bg-orange-100 transition duration-300 text-center">
+                        Ver Cardápio
+                    </a>
+                    <a href="https://wa.me/5573999415958" class="bg-green-500 text-white font-bold py-3 px-6 rounded-full hover:bg-green-600 transition duration-300 flex items-center justify-center space-x-2">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Pedir pelo WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://plus.unsplash.com/premium_photo-1691939610599-a9a3dde8e810?q=80&w=2650&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                     alt="Drinks especiais" 
+                     class="rounded-lg shadow-2xl floating max-w-md w-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-orange-600">Nossos Produtos</h2>
+            
+            <!-- Beers -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold mb-8 text-orange-500 flex items-center">
+                    <i class="fas fa-beer mr-3"></i> Cervejas Especiais
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Beer 1 -->
+                    <div class="bg-orange-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                        <div class="h-48 bg-orange-100 flex items-center justify-center">
+                            <i class="fas fa-beer text-6xl text-orange-400"></i>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="font-bold text-xl mb-2 text-orange-700">Heineken</h4>
+                            <p class="text-gray-600 mb-4">Cerveja premium com sabor refrescante e leve amargor.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-orange-600">R$ 8,50</span>
+                                <button class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition">
+                                    Pedir agora
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Beer 2 -->
+                    <div class="bg-orange-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                        <div class="h-48 bg-orange-100 flex items-center justify-center">
+                            <i class="fas fa-beer text-6xl text-orange-400"></i>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="font-bold text-xl mb-2 text-orange-700">Stella Artois</h4>
+                            <p class="text-gray-600 mb-4">Cerveja belga com sabor suave e refrescante.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-orange-600">R$ 9,00</span>
+                                <button class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition">
+                                    Pedir agora
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Beer 3 -->
+                    <div class="bg-orange-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                        <div class="h-48 bg-orange-100 flex items-center justify-center">
+                            <i class="fas fa-beer text-6xl text-orange-400"></i>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="font-bold text-xl mb-2 text-orange-700">Brahma Duplo Malte</h4>
+                            <p class="text-gray-600 mb-4">Cerveja com sabor encorpado e aroma marcante.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-orange-600">R$ 7,00</span>
+                                <button class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition">
+                                    Pedir agora
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Flavored Ice Drinks -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-8 text-orange-500 flex items-center">
+                    <i class="fas fa-cocktail mr-3"></i> Drinks com Gelo Saborizado
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Drink 1 -->
+                    <div class="bg-orange-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                        <div class="h-48 bg-orange-100 flex items-center justify-center">
+                            <i class="fas fa-glass-whiskey text-6xl text-orange-400"></i>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="font-bold text-xl mb-2 text-orange-700">Caipirinha de Limão</h4>
+                            <p class="text-gray-600 mb-4">Tradicional caipirinha com gelo saborizado de limão siciliano.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-orange-600">R$ 12,00</span>
+                                <button class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition">
+                                    Pedir agora
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Drink 2 -->
+                    <div class="bg-orange-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                        <div class="h-48 bg-orange-100 flex items-center justify-center">
+                            <i class="fas fa-glass-whiskey text-6xl text-orange-400"></i>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="font-bold text-xl mb-2 text-orange-700">Drink de Maracujá</h4>
+                            <p class="text-gray-600 mb-4">Drink refrescante com gelo saborizado de maracujá.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-orange-600">R$ 14,00</span>
+                                <button class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition">
+                                    Pedir agora
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Drink 3 -->
+                    <div class="bg-orange-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                        <div class="h-48 bg-orange-100 flex items-center justify-center">
+                            <i class="fas fa-glass-whiskey text-6xl text-orange-400"></i>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="font-bold text-xl mb-2 text-orange-700">Mojito de Morango</h4>
+                            <p class="text-gray-600 mb-4">Mojito especial com gelo saborizado de morango.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-orange-600">R$ 15,00</span>
+                                <button class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition">
+                                    Pedir agora
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-orange-100">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold mb-6 text-orange-600">Sobre a Adega das Negas</h2>
+                    <p class="text-gray-700 mb-4">
+                        Localizada na movimentada Av. Itamaraju, próximo à UPA do Prado, a Adega das Negas é o point perfeito para quem busca cervejas geladas e drinks especiais com gelo saborizado.
+                    </p>
+                    <p class="text-gray-700 mb-4">
+                        Nossa especialidade são os drinks preparados com gelo saborizado, que garantem uma experiência única de sabor e refrescância. Cada gole é uma explosão de sabores que vai te surpreender!
+                    </p>
+                    <p class="text-gray-700">
+                        Ambiente descontraído e acolhedor, perfeito para reunir os amigos e curtir bons momentos com as melhores bebidas da região.
+                    </p>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="relative rounded-lg overflow-hidden shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                             alt="Interior da Adega das Negas" 
+                             class="w-full h-auto">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6">
+                            <h3 class="text-white text-xl font-bold">Venha nos visitar!</h3>
+                            <p class="text-orange-200">Ambiente climatizado e atendimento especializado</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-orange-600">Nossa Localização</h2>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h3 class="text-2xl font-semibold mb-4 text-orange-500">Como chegar</h3>
+                    <p class="text-gray-700 mb-4">
+                        Estamos localizados na Avenida Itamaraju, próximo à UPA do Prado, em Prado - BA.
+                    </p>
+                    <div class="bg-orange-50 p-6 rounded-lg mb-6">
+                        <h4 class="font-bold text-lg mb-2 text-orange-600 flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i> Endereço
+                        </h4>
+                        <p class="text-gray-700">Av. Itamaraju, Prado - BA</p>
+                        <p class="text-gray-700">Próximo à UPA do Prado</p>
+                    </div>
+                    
+                    <div class="bg-orange-50 p-6 rounded-lg">
+                        <h4 class="font-bold text-lg mb-2 text-orange-600 flex items-center">
+                            <i class="fas fa-clock mr-2"></i> Horário de Funcionamento
+                        </h4>
+                        <p class="text-gray-700 mb-2"><span class="font-semibold">Segunda a Quinta:</span> 16h - 00h</p>
+                        <p class="text-gray-700 mb-2"><span class="font-semibold">Sexta e Sábado:</span> 16h - 02h</p>
+                        <p class="text-gray-700"><span class="font-semibold">Domingo:</span> 14h - 22h</p>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="h-96 w-full rounded-lg overflow-hidden shadow-lg">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.032540041137!2d-39.2428172247891!3d-17.321656619063734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDE5JzE3LjkiUyAzOcKwMTQnMjYuMyJX!5e0!3m2!1spt-BR!2sbr!4v1689876543210!5m2!1spt-BR!2sbr" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <a href="https://goo.gl/maps/9YQqyJYzZzY2QY8H8" 
+                           target="_blank" 
+                           class="inline-flex items-center bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 transition">
+                            <i class="fas fa-map-marked-alt mr-2"></i>
+                            Abrir no Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-orange-600 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Entre em Contato</h2>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h3 class="text-2xl font-semibold mb-6">Fale conosco</h3>
+                    
+                    <div class="mb-8">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-orange-500 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Telefone</h4>
+                                <p class="text-orange-100">(73) 9 9941-5958</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center mb-4">
+                            <div class="bg-orange-500 p-3 rounded-full mr-4">
+                                <i class="fab fa-whatsapp text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">WhatsApp</h4>
+                                <p class="text-orange-100">(73) 9 9941-5958</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="bg-orange-500 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Email</h4>
+                                <p class="text-orange-100">contato@adegadasnegas.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-2xl font-semibold mb-6">Redes Sociais</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-orange-500 hover:bg-orange-400 p-4 rounded-full transition">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="bg-orange-500 hover:bg-orange-400 p-4 rounded-full transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="bg-orange-500 hover:bg-orange-400 p-4 rounded-full transition">
+                            <i class="fab fa-tiktok text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <form class="bg-white text-gray-800 p-6 rounded-lg shadow-lg">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-bold mb-2">Nome</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="phone" class="block text-gray-700 font-bold mb-2">Telefone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 font-bold mb-2">Mensagem</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-orange-600 text-white py-3 px-6 rounded-lg hover:bg-orange-700 transition font-bold">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-12 bg-orange-700 text-white text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-6">Venha conhecer a Adega das Negas!</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">As melhores cervejas e drinks com gelo saborizado de Prado - BA</p>
+            <a href="https://wa.me/5573999415958" class="inline-flex items-center bg-white text-orange-600 font-bold py-4 px-8 rounded-full hover:bg-orange-100 transition text-lg pulse">
+                <i class="fab fa-whatsapp mr-2 text-2xl"></i>
+                Faça seu pedido pelo WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-orange-900 text-orange-200 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-beer text-2xl"></i>
+                        <h3 class="text-2xl font-bold">Adega das Negas</h3>
+                    </div>
+                    <p class="mt-2">Cervejas e drinks especiais em Prado - BA</p>
+                </div>
+                
+                <div class="flex flex-col items-center md:items-end">
+                    <p class="mb-2">Av. Itamaraju, Prado - BA</p>
+                    <p class="mb-2">Próximo à UPA do Prado</p>
+                    <p>(73) 9 9941-5958</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-orange-800 mt-8 pt-8 text-center">
+                <p>&copy; 2023 Adega das Negas. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5573999415958" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-xl hover:bg-green-600 transition z-50">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Animation on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.floating, .pulse');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
+</body>
+</html>
